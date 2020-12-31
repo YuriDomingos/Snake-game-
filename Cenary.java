@@ -14,7 +14,8 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author Yuri Game cenary
+ * @author Yuri Domingos
+   Data  : 13-11-2020
  */
 public class Cenary extends JPanel implements Runnable{
 
@@ -25,17 +26,11 @@ public class Cenary extends JPanel implements Runnable{
    
 
     public Cenary() {
-        
-        
        
-       
-        
         phase = 1;
         Xpos=10;
         Ypos = 130;
-        new Thread(this).start();
-                
-        
+        new Thread(this).start()    
         
     }
     
@@ -43,7 +38,7 @@ public class Cenary extends JPanel implements Runnable{
     public void paintComponent(Graphics g)
     {
         
-         //super.paintComponent(g);  //
+         super.paintComponent(g);  
         g.clearRect(0, 0, this.getWidth(), this.getHeight());
         int x = 0 , y = 0;
         double A = 10, t, thickness = 1;
@@ -64,12 +59,7 @@ public class Cenary extends JPanel implements Runnable{
         
     }
     
-    
-    
-    
-    
-    
-    
+   
     
     @Override
     public void run() {
